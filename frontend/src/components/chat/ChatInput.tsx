@@ -27,9 +27,10 @@ export default function ChatInput({ onSend, isLoading }: ChatInputProps) {
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Ask about Jonathan's projects, research, or background..."
         className="chat-textarea"
+        disabled={isLoading}
       />
       <button type="submit" disabled={isLoading} className="chat-submit">
-        {isLoading ? "Thinking..." : "Send"}
+        {isLoading ? "Unavailable / Thinking..." : "Send"}
       </button>
     </form>
   );
