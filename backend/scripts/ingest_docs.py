@@ -4,7 +4,7 @@ from pathlib import Path
 from app.services.chunking import chunk_text
 from app.services.embeddings import get_embedding
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = PROJECT_ROOT / "data" / "sample_docs"
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "chunks.json"
 

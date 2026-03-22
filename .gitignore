@@ -68,18 +68,19 @@ build/
 .idea/
 
 ############################
-# Data / Local Files
+# Backend Data
 ############################
-data/raw/*
-data/processed/*
-data/sample_docs/*
+backend/data/raw/*
+backend/data/processed/*
 
-# Keep directory structure
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/processed/chunks.json
-!data/sample_docs/
-!data/sample_docs/**
+# Keep directory structure + required files
+!backend/data/raw/.gitkeep
+!backend/data/processed/.gitkeep
+!backend/data/processed/chunks.json
+
+# Keep ALL sample docs (needed for demo + ingestion)
+!backend/data/sample_docs/
+!backend/data/sample_docs/**
 
 
 
