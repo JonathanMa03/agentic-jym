@@ -1,32 +1,30 @@
+import math
 from typing import List, Dict
-from app.services.ingestion import build_chunks
+from app.services.ingestion import build_chunks_with_embeddings
+from app.services.embeddings import get_embedding
 
 
-def simple_score(query: str, text: str) -> int:
-    query_words = query.lower().split()
-    text_lower = text.lower()
+def cosine_similarity(a: List[float], b: List[float]) -> float:
+    dot = sum(x * y for x, y in zip(a, b))
+    norm_a = math.sqrt(sum(x * x for x in a))
+    norm_b = math.sqrt(sum(y * y for y in b))
 
-    score = 0
-    for word in query_words:
-        if word in text_lower:
-            score += 1
+    if norm_a == 0 or norm_b == 0:
+        return 0.0
 
-    # manual boost
-    if "project" in query.lower() and "project" in text_lower:
-        score += 3
-
-    return score
+    return dot / (norm_a * norm_b)
 
 
 def retrieve(query: str, top_k: int = 3) -> List[Dict]:
-    chunks = build_chunks()
+    query_embedding = get_embedding(query)
+    chunks = build_chunks_with_embeddings()
 
     scored = []
     for chunk in chunks:
-        score = simple_score(query, chunk["text"])
-        if score > 0:
-            scored.append((score, chunk))
+        score = cosine_similarity(query_embedding, chunk["embedding"])
+        scored.append((score, chunk))
 
     scored.sort(key=lambda x: x[0], reverse=True)
 
-    return [chunk for _, chunk in scored[:top_k]]
+    top_chunks = [chunk for _, chunk in scored[:top_k]]
+    return top_chunks

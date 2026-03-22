@@ -1,29 +1,27 @@
-import os
+from pathlib import Path
 from typing import List, Dict
 from app.services.chunking import chunk_text
+from app.services.embeddings import get_embedding
 
-DATA_PATH = os.path.join(os.getcwd(), "../data/sample_docs")
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+DATA_PATH = PROJECT_ROOT / "data" / "sample_docs"
 
 
 def load_documents() -> List[Dict]:
     documents = []
 
-    for filename in os.listdir(DATA_PATH):
-        if filename.endswith(".txt"):
-            filepath = os.path.join(DATA_PATH, filename)
+    for filepath in DATA_PATH.glob("*.txt"):
+        text = filepath.read_text(encoding="utf-8")
 
-            with open(filepath, "r", encoding="utf-8") as f:
-                text = f.read()
-
-            documents.append({
-                "id": filename,
-                "text": text
-            })
+        documents.append({
+            "id": filepath.name,
+            "text": text
+        })
 
     return documents
 
 
-def build_chunks():
+def build_chunks_with_embeddings() -> List[Dict]:
     docs = load_documents()
     all_chunks = []
 
@@ -31,10 +29,13 @@ def build_chunks():
         chunks = chunk_text(doc["text"])
 
         for i, chunk in enumerate(chunks):
+            embedding = get_embedding(chunk)
+
             all_chunks.append({
                 "doc_id": doc["id"],
                 "chunk_id": f"{doc['id']}_{i}",
-                "text": chunk
+                "text": chunk,
+                "embedding": embedding
             })
 
     return all_chunks
