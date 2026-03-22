@@ -1,0 +1,46 @@
+# =========================
+# Core API
+# =========================
+fastapi
+uvicorn[standard]
+
+# =========================
+# Config / Environment
+# =========================
+pydantic
+pydantic-settings
+python-dotenv
+
+# =========================
+# LLM + Embeddings
+# =========================
+openai
+tiktoken
+
+# =========================
+# Database / Vector Store
+# =========================
+supabase
+psycopg2-binary
+
+# =========================
+# HTTP / Async
+# =========================
+httpx
+
+# =========================
+# Document Processing
+# =========================
+pypdf
+
+# =========================
+# Utilities
+# =========================
+numpy
+pandas
+
+# =========================
+# Testing
+# =========================
+pytest
+pytest-asyncio
