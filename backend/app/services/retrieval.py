@@ -1,5 +1,6 @@
 import math
 from typing import List, Dict
+
 from app.services.ingestion import get_chunks
 from app.services.embeddings import get_embedding
 
@@ -25,5 +26,4 @@ def retrieve(query: str, top_k: int = 3) -> List[Dict]:
         scored.append((score, chunk))
 
     scored.sort(key=lambda x: x[0], reverse=True)
-
     return [chunk for _, chunk in scored[:top_k]]
