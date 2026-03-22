@@ -1,6 +1,6 @@
 import math
 from typing import List, Dict
-from app.services.ingestion import build_chunks_with_embeddings
+from app.services.ingestion import get_chunks
 from app.services.embeddings import get_embedding
 
 
@@ -17,7 +17,7 @@ def cosine_similarity(a: List[float], b: List[float]) -> float:
 
 def retrieve(query: str, top_k: int = 3) -> List[Dict]:
     query_embedding = get_embedding(query)
-    chunks = build_chunks_with_embeddings()
+    chunks = get_chunks()
 
     scored = []
     for chunk in chunks:
@@ -26,5 +26,4 @@ def retrieve(query: str, top_k: int = 3) -> List[Dict]:
 
     scored.sort(key=lambda x: x[0], reverse=True)
 
-    top_chunks = [chunk for _, chunk in scored[:top_k]]
-    return top_chunks
+    return [chunk for _, chunk in scored[:top_k]]

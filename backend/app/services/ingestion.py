@@ -6,6 +6,9 @@ from app.services.embeddings import get_embedding
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DATA_PATH = PROJECT_ROOT / "data" / "sample_docs"
 
+# GLOBAL CACHE
+CHUNK_STORE: List[Dict] = []
+
 
 def load_documents() -> List[Dict]:
     documents = []
@@ -21,7 +24,11 @@ def load_documents() -> List[Dict]:
     return documents
 
 
-def build_chunks_with_embeddings() -> List[Dict]:
+def initialize_chunks():
+    global CHUNK_STORE
+
+    print("🔄 Building chunk store...")
+
     docs = load_documents()
     all_chunks = []
 
@@ -38,4 +45,10 @@ def build_chunks_with_embeddings() -> List[Dict]:
                 "embedding": embedding
             })
 
-    return all_chunks
+    CHUNK_STORE = all_chunks
+
+    print(f"Loaded {len(CHUNK_STORE)} chunks")
+
+
+def get_chunks():
+    return CHUNK_STORE
