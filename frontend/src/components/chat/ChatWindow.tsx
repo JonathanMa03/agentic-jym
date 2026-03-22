@@ -34,6 +34,7 @@ export default function ChatWindow() {
     } catch (err) {
       const message =
         err instanceof Error ? err.message : "Something went wrong.";
+
       setError(message);
       setMessages((prev) => [
         ...prev,
@@ -51,10 +52,11 @@ export default function ChatWindow() {
     <div className="chat-layout">
       <section className="chat-panel">
         <h1 className="hero-title" style={{ fontSize: "3rem", marginBottom: "1rem" }}>
-          Personal Knowledge OS
+          Chat with my AI Assistant!
         </h1>
+
         <p className="hero-text">
-          Ask about Jonathan Ma&apos;s background, projects, research, and
+          Ask questions about my experience, research, academic background, and
           technical interests.
         </p>
       </section>
@@ -62,13 +64,11 @@ export default function ChatWindow() {
       <section className="message-list">
         {messages.length === 0 ? (
           <div className="chat-empty">
-            Try a prompt:
+            <p style={{ marginTop: 0 }}>You can ask questions such as:</p>
             <div className="prompt-list">
+              <span>• What are Jonathan&apos;s research interests?</span>
               <span>• What projects has Jonathan worked on?</span>
-              <span>• What are his research interests?</span>
-              <span>
-                • How does his background connect statistics and machine learning?
-              </span>
+              <span>• How does his background connect statistics and machine learning?</span>
             </div>
           </div>
         ) : (
