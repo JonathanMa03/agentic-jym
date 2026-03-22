@@ -1,5 +1,8 @@
 # JM's Personal Secretary
 
+Visit the chatbot: [Chat with my AI Assistant](https://agentic-jym.vercel.app/)
+
+
 A public-facing AI knowledge assistant that answers questions about my background, projects, research, coursework, and technical interests using a retrieval-augmented generation (RAG) pipeline.
 
 This project is being built as a separate website and repository, with the option to integrate or link it from my main GitHub Pages portfolio later. The system uses a JavaScript/TypeScript frontend for the web interface and a Python backend for retrieval, ingestion, and LLM orchestration.
@@ -37,7 +40,7 @@ The frontend will be built with Next.js and TypeScript.
 
 Responsibilities:
 - public-facing website interface,
-- chat UI,
+- chat UI with rate limits,
 - displaying responses and sources,
 - calling the backend API,
 - eventual deployment as the standalone chatbot website.
