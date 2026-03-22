@@ -34,7 +34,6 @@ export default function ChatWindow() {
     } catch (err) {
       const message =
         err instanceof Error ? err.message : "Something went wrong.";
-
       setError(message);
       setMessages((prev) => [
         ...prev,
@@ -49,23 +48,27 @@ export default function ChatWindow() {
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-4xl flex-col gap-6">
-      <div className="rounded-2xl border border-gray-200 bg-white p-6">
-        <h1 className="text-2xl font-semibold">Personal Knowledge OS</h1>
-        <p className="mt-2 text-sm text-gray-600">
+    <div className="chat-layout">
+      <section className="chat-panel">
+        <h1 className="hero-title" style={{ fontSize: "3rem", marginBottom: "1rem" }}>
+          Personal Knowledge OS
+        </h1>
+        <p className="hero-text">
           Ask about Jonathan Ma&apos;s background, projects, research, and
           technical interests.
         </p>
-      </div>
+      </section>
 
-      <div className="flex flex-col gap-4">
+      <section className="message-list">
         {messages.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-6 text-sm text-gray-600">
-            Try a prompt like:
-            <div className="mt-3 flex flex-col gap-2">
+          <div className="chat-empty">
+            Try a prompt:
+            <div className="prompt-list">
               <span>• What projects has Jonathan worked on?</span>
               <span>• What are his research interests?</span>
-              <span>• How does his background connect statistics and ML?</span>
+              <span>
+                • How does his background connect statistics and machine learning?
+              </span>
             </div>
           </div>
         ) : (
@@ -77,19 +80,15 @@ export default function ChatWindow() {
             />
           ))
         )}
-      </div>
+      </section>
 
-      {error && (
-        <div className="rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-          {error}
-        </div>
-      )}
+      {error && <div className="error-box">{error}</div>}
 
       <SourceList sources={sources} />
 
-      <div className="rounded-2xl border border-gray-200 bg-white p-6">
+      <section className="chat-panel">
         <ChatInput onSend={handleSend} isLoading={isLoading} />
-      </div>
+      </section>
     </div>
   );
 }
