@@ -72,7 +72,12 @@ build/
 ############################
 data/raw/*
 data/processed/*
-data/sample_docs/*
+
+# Keep directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/sample_docs/
+!data/sample_docs/**
 
 # Keep directory structure
 !data/raw/.gitkeep
