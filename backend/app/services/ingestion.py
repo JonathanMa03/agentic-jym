@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from typing import List, Dict
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CACHE_PATH = PROJECT_ROOT / "data" / "processed" / "chunks.json"
 
 CHUNK_STORE: List[Dict] = []
