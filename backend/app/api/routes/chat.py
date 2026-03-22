@@ -19,4 +19,5 @@ async def chat(payload: ChatRequest):
         return ChatResponse(answer=answer, sources=sources)
 
     except Exception as e:
+        print(f"CHAT ROUTE ERROR: {repr(e)}")
         raise HTTPException(status_code=500, detail=str(e))
