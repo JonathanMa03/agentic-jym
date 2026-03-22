@@ -2,6 +2,7 @@
 # Core API
 # =========================
 fastapi
+fastapi[standard]
 uvicorn[standard]
 
 # =========================
