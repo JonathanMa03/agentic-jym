@@ -10,7 +10,10 @@ router = APIRouter()
 
 @router.post("/", response_model=ChatResponse)
 async def chat(payload: ChatRequest, request: Request):
-    client_ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "unknown")
+    client_ip = request.headers.get(
+        "x-forwarded-for",
+        request.client.host if request.client else "unknown"
+    )
     client_ip = client_ip.split(",")[0].strip()
 
     limited, remaining = is_rate_limited(client_ip)
@@ -25,9 +28,13 @@ async def chat(payload: ChatRequest, request: Request):
         prompt = build_prompt(payload.message, retrieved_chunks)
         answer = generate_response(prompt)
 
-        sources = [c["doc_id"] for c in retrieved_chunks]
+        sources = list({
+            c.get("title", "unknown")
+            for c in retrieved_chunks
+        })
 
         return ChatResponse(answer=answer, sources=sources)
+
     except Exception as e:
         print("CHAT ROUTE ERROR repr:", repr(e))
         print("CHAT ROUTE ERROR str:", str(e))

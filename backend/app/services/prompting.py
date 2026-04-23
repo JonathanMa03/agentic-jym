@@ -2,7 +2,7 @@ from typing import List, Dict
 
 
 def build_prompt(query: str, retrieved_chunks: List[Dict]) -> str:
-    context = "\n\n".join([c["text"] for c in retrieved_chunks])
+    context = "\n\n".join([c["chunk_text"] for c in retrieved_chunks])
 
     prompt = f"""
 You are an assistant answering questions about Jonathan Ma.
