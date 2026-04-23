@@ -1,7 +1,0 @@
-Jonathan Ma is developing research directions around Bayesian Vector Autoregressions, robust forecasting, and uncertainty-aware modeling.
-
-A major area of interest is extending Bayesian VAR frameworks to better handle model misspecification, distributional shifts, and non-Gaussian innovation behavior.
-
-This includes interest in methods such as distributionally robust optimization, residual modeling, and generative approaches for representing uncertainty in time series systems.
-
-His broader research interests connect Bayesian statistics, forecasting, optimization, and machine learning.

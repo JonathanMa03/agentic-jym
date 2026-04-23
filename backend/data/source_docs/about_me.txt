@@ -1,0 +1,6 @@
+Title: About Me
+Source Type: profile
+
+Jonathan Ma is a Master's student in Applied Mathematics and Statistics at Johns Hopkins University.
+
+His interests include Bayesian statistics, machine learning, forecasting, optimization, and quantitative modeling.

@@ -1,50 +1,110 @@
-import os
 from pathlib import Path
-from app.db.supabase_client import supabase
-from app.core.config import OPENAI_API_KEY
+from typing import Iterator
+
 from openai import OpenAI
+
+from app.core.config import OPENAI_API_KEY
+from app.db.supabase_client import supabase
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-DATA_DIR = Path("data/sample_docs")
+DATA_DIR = Path("data/source_docs")
+CHUNK_SIZE = 400
+CHUNK_OVERLAP = 75
 
-def chunk_text(text, chunk_size=500):
+
+def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> Iterator[str]:
     words = text.split()
-    for i in range(0, len(words), chunk_size):
-        yield " ".join(words[i:i+chunk_size])
+    start = 0
 
-def embed_text(text):
+    while start < len(words):
+        end = start + chunk_size
+        yield " ".join(words[start:end])
+
+        if end >= len(words):
+            break
+
+        start += chunk_size - overlap
+
+
+def embed_text(text: str) -> list[float]:
     response = client.embeddings.create(
         model="text-embedding-3-small",
         input=text
     )
     return response.data[0].embedding
 
-def ingest():
-    for file in DATA_DIR.glob("*.txt"):
-        title = file.stem
 
-        # insert document
-        doc = supabase.table("documents").insert({
+def parse_source_doc(text: str, fallback_title: str) -> tuple[str, str, str]:
+    lines = text.splitlines()
+
+    title = fallback_title
+    source_type = "general"
+
+    content_lines = []
+
+    for line in lines:
+        if line.startswith("Title:"):
+            title = line.replace("Title:", "", 1).strip()
+        elif line.startswith("Source Type:"):
+            source_type = line.replace("Source Type:", "", 1).strip()
+        else:
+            content_lines.append(line)
+
+    content = "\n".join(content_lines).strip()
+    return title, source_type, content
+
+
+def upsert_document(title: str, source_type: str) -> str:
+    existing = (
+        supabase.table("documents")
+        .select("id")
+        .eq("title", title)
+        .execute()
+    )
+
+    if existing.data:
+        document_id = existing.data[0]["id"]
+
+        supabase.table("chunks").delete().eq("document_id", document_id).execute()
+        supabase.table("documents").update({"source_type": source_type}).eq("id", document_id).execute()
+
+        return document_id
+
+    inserted = (
+        supabase.table("documents")
+        .insert({
             "title": title,
-            "source_type": "text"
-        }).execute()
+            "source_type": source_type,
+        })
+        .execute()
+    )
 
-        doc_id = doc.data[0]["id"]
+    return inserted.data[0]["id"]
 
-        text = file.read_text()
 
-        for i, chunk in enumerate(chunk_text(text)):
+def ingest() -> None:
+    for file in DATA_DIR.glob("*.txt"):
+        raw_text = file.read_text(encoding="utf-8")
+        fallback_title = file.stem
+
+        title, source_type, content = parse_source_doc(raw_text, fallback_title)
+        document_id = upsert_document(title, source_type)
+
+        chunks = list(chunk_text(content))
+
+        for i, chunk in enumerate(chunks):
             embedding = embed_text(chunk)
 
             supabase.table("chunks").insert({
-                "document_id": doc_id,
+                "document_id": document_id,
                 "chunk_index": i,
                 "chunk_text": chunk,
-                "embedding": embedding
+                "embedding": embedding,
             }).execute()
 
-        print(f"Ingested {title}")
+        print(f"Ingested {title} ({len(chunks)} chunks)")
+
 
 if __name__ == "__main__":
     ingest()

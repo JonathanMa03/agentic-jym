@@ -1,0 +1,8 @@
+Title: Research
+Source Type: research
+
+Research Interests:
+Bayesian econometrics, probabilistic machine learning, forecasting, robust modeling, and LLM systems.
+
+Current Directions:
+Jonathan Ma is interested in robust Bayesian time series modeling, uncertainty quantification, and practical AI systems for knowledge retrieval.

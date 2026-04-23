@@ -1,7 +1,0 @@
-Jonathan Ma is a Master of Science in Engineering student in Applied Mathematics and Statistics at Johns Hopkins University.
-
-He has an academic background in finance, economics, and statistics, and is interested in combining statistical modeling, machine learning, and optimization for real-world decision-making problems.
-
-His interests include Bayesian statistics, time series forecasting, probabilistic machine learning, distributionally robust optimization, and generative modeling.
-
-He is especially interested in research and applications at the intersection of forecasting, uncertainty quantification, and data-driven decision-making.

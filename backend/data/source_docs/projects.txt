@@ -1,0 +1,22 @@
+Title: Projects
+Source Type: project
+
+Project: Predictors of Academic Performance: The Role of Alcohol Consumption and Gender
+Description:
+This project investigates whether alcohol use predicts academic performance and whether gender moderates the relationship.
+
+Methods:
+Linear regression with interaction terms and more than 30 controls.
+
+Technologies:
+R, dplyr, ggplot2
+
+Project: Stock Price Forecasting with Neural Networks
+Description:
+A Dash-based web app for real-time stock prediction using neural networks and interactive visualizations.
+
+Methods:
+Neural networks, time series forecasting
+
+Technologies:
+Python, Plotly, NumPy, Pandas, Dash
