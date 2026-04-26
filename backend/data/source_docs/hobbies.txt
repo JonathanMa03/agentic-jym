@@ -1,0 +1,29 @@
+Title: Hobbies
+Source Type: personal
+
+Overview:
+Jonathan Ma’s hobbies reflect a combination of creativity, discipline, and structured problem-solving, often overlapping with his analytical and technical interests.
+
+Hobbies:
+Piano, gaming, cooking, and personal coding projects.
+
+Details:
+
+Piano:
+Practices a mix of video game soundtracks, jazz improvisation, and classical music.
+Demonstrates attention to detail, structured practice habits, and the ability to perform and adapt in real time.
+
+Gaming:
+Plays games such as Genshin Impact, Honkai Star Rail, Zenless Zone Zero, Wuthering Waves, Minecraft, Clash Royale, and Stardew Valley.
+Develops strategic thinking, persistence, system-level understanding, and efficient time management across multiple long-term tasks.
+
+Coding Projects:
+Builds small experimental systems such as motion tracking using WiFi signal disruption, automated email digests, keyboard-to-soundboard tools, and task management systems with urgency metrics and auto-deletion.
+Reflects creativity, engineering intuition, and the ability to translate ideas into working systems.
+
+Cooking:
+Enjoys preparing and coordinating meals, often managing multiple processes simultaneously.
+Reinforces organization, planning, adaptability, and execution under time constraints.
+
+Personality Signals:
+These hobbies collectively highlight strong attention to detail, structured thinking, adaptability under pressure, and persistence. They demonstrate an ability to balance creativity with technical execution, and to approach both artistic and analytical tasks with discipline and problem-solving focus.

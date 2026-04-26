@@ -1,22 +1,159 @@
 Title: Projects
 Source Type: project
 
+Overview:
+Jonathan Ma has worked on projects spanning econometrics, machine learning, Bayesian modeling, financial analysis, healthcare analytics, and AI systems. His work emphasizes statistical rigor, scalable pipelines, and real-world applicability.
+
+---
+
 Project: Predictors of Academic Performance: The Role of Alcohol Consumption and Gender
 Description:
-This project investigates whether alcohol use predicts academic performance and whether gender moderates the relationship.
-
+Analyzed the relationship between alcohol consumption and academic performance using student-level data.
+Problem:
+Determine whether alcohol use impacts grades and whether gender moderates this relationship.
 Methods:
-Linear regression with interaction terms and more than 30 controls.
-
+Linear regression with interaction terms, ANOVA, residual diagnostics, Shapiro–Wilk and Breusch–Pagan tests.
 Technologies:
-R, dplyr, ggplot2
+R, dplyr, ggplot2, RMarkdown.
+Results:
+Weekend alcohol consumption negatively impacted performance, especially for male students, with statistically significant interaction effects.
 
-Project: Stock Price Forecasting with Neural Networks
+---
+
+Project: Stock Forecaster
 Description:
-A Dash-based web app for real-time stock prediction using neural networks and interactive visualizations.
-
+Built an interactive dashboard for stock price forecasting using neural networks.
+Problem:
+Forecast noisy, non-stationary financial time series in an accessible way.
 Methods:
-Neural networks, time series forecasting
-
+Neural network time series models, EDA, modular pipeline for training and validation.
 Technologies:
-Python, Plotly, NumPy, Pandas, Dash
+Python, pandas, NumPy, yfinance, neuralforecast, PyTorch Lightning, Plotly, Dash.
+Results:
+Delivered an interactive system for forecasting and visualization with a fully reproducible pipeline.
+
+---
+
+Project: Predicting Depression — Logistic Regression vs Random Forest
+Description:
+Developed a framework to predict depression using survey data.
+Problem:
+Improve prediction accuracy while maintaining interpretability in a healthcare setting.
+Methods:
+Logistic regression and random forest, feature engineering, threshold optimization, ROC analysis.
+Technologies:
+Python, pandas, NumPy, scikit-learn.
+Results:
+Logistic regression achieved strong performance with high recall and interpretability, outperforming random forest in balance.
+
+---
+
+Project: Market Behavior Analysis through EDA and Clustering
+Description:
+Analyzed stock market behavior using clustering and correlation analysis.
+Problem:
+Identify relationships between stocks and sector-level patterns.
+Methods:
+EDA, K-means clustering, correlation analysis, before/after event comparisons.
+Technologies:
+Python, pandas, NumPy, yfinance, matplotlib, seaborn, scikit-learn.
+Results:
+Identified risk-return clusters and sector co-movement patterns, highlighting diversification insights.
+
+---
+
+Project: Bayesian Hierarchical Modeling and Clustering of Malignant Cancer Diagnoses
+Description:
+Developed a Bayesian hierarchical model for analyzing cancer severity across populations.
+Problem:
+Model hierarchical dependencies and uncertainty in medical data.
+Methods:
+Bayesian logistic regression, multilevel modeling, posterior inference, clustering on posterior summaries.
+Technologies:
+R, brms (Stan backend), tidyverse.
+Results:
+Identified demographic and regional disparities and produced calibrated uncertainty estimates.
+
+---
+
+Project: Obesity of the Youth: Health Disparity and Income Inequality
+Description:
+Analyzed adolescent obesity using survey data and inequality metrics.
+Problem:
+Understand disparities across socioeconomic and demographic groups.
+Methods:
+Logistic regression, marginal effects, concentration and Kakwani indices, fixed effects.
+Technologies:
+R, tidyverse, survey tools.
+Results:
+Identified significant inequality patterns and structural drivers of obesity risk.
+
+---
+
+Project: Diffusion-Based Topic Evolution in Biomedical Literature
+Description:
+Built a system to track how research topics evolve over time.
+Problem:
+Traditional topic models fail to capture dynamic evolution of topics.
+Methods:
+Embedding-based clustering, HDBSCAN, trajectory alignment, diffusion modeling.
+Technologies:
+Python, sentence-transformers, scikit-learn, HDBSCAN, PyTorch, Plotly.
+Results:
+Captured topic birth, evolution, and decay, with probabilistic forecasting of future topic trajectories.
+
+---
+
+Project: droBVAR — Robust Bayesian VAR with Diffusion-Based Innovations
+Description:
+Developing a robust Bayesian VAR framework with nonparametric innovations.
+Problem:
+Standard VAR models fail under heavy tails and distributional shifts.
+Methods:
+Bayesian VAR, Wasserstein DRO, diffusion-based residual modeling.
+Technologies:
+Python, PyTorch, NumPy, SciPy.
+Results:
+Early results show improved robustness and more realistic stress-testing behavior.
+
+---
+
+Project: Comparative Study of BVARs with Non-Gaussian Innovations
+Description:
+Compared multiple VAR models with non-Gaussian innovations.
+Problem:
+Gaussian assumptions fail to capture financial tail risk.
+Methods:
+Student-t VAR, mixture VAR, stochastic volatility VAR, MCMC inference.
+Technologies:
+Python, NumPy, SciPy.
+Results:
+Non-Gaussian models significantly improved predictive performance and tail risk estimation.
+
+---
+
+Project: Causal Survival Probability Estimation with Reconstructed IPD
+Description:
+Developed a Bayesian framework for causal survival analysis using reconstructed data.
+Problem:
+Missing covariate distributions break standard causal inference assumptions.
+Methods:
+Bayesian nonparametric reweighting, Dirichlet priors, survival modeling.
+Technologies:
+Python, R, Stan-style workflows.
+Results:
+Reduced bias and improved uncertainty calibration compared to naive approaches.
+
+---
+
+Project: JM’s Personal Secretary (AI Knowledge Assistant)
+Description:
+Built a retrieval-augmented AI assistant for answering questions about personal work.
+Problem:
+Traditional portfolios are static and difficult to navigate.
+Methods:
+RAG pipeline with ingestion, chunking, embedding search, and prompt construction.
+Technologies:
+Next.js, TypeScript, FastAPI, Python, vector retrieval, LLM APIs.
+Results:
+Delivered a deployable AI assistant with grounded responses and scalable architecture.

@@ -13,18 +13,27 @@ CHUNK_SIZE = 400
 CHUNK_OVERLAP = 75
 
 
-def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> Iterator[str]:
-    words = text.split()
-    start = 0
+def chunk_text(text: str) -> list[str]:
+    sections = [s.strip() for s in text.split("---") if s.strip()]
+    chunks = []
 
-    while start < len(words):
-        end = start + chunk_size
-        yield " ".join(words[start:end])
+    for section in sections:
+        words = section.split()
 
-        if end >= len(words):
-            break
+        if len(words) <= CHUNK_SIZE:
+            chunks.append(section)
+        else:
+            start = 0
+            while start < len(words):
+                end = start + CHUNK_SIZE
+                chunks.append(" ".join(words[start:end]))
 
-        start += chunk_size - overlap
+                if end >= len(words):
+                    break
+
+                start += CHUNK_SIZE - CHUNK_OVERLAP
+
+    return chunks
 
 
 def embed_text(text: str) -> list[float]:

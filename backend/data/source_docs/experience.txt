@@ -1,0 +1,131 @@
+Title: Experience
+Source Type: experience
+
+Overview:
+Jonathan Ma has experience across academic research, teaching, tutoring, data analysis, financial text mining, health economics, econometrics, and student leadership. His roles combine quantitative research, data pipeline development, statistical modeling, literature synthesis, and communication of technical ideas.
+
+---
+
+Role: Research Assistant
+Organization: Rutgers University, Dr. Tengfei Zhang
+Time Period: September 2023 - May 2025
+
+Overview:
+Supported research in financial text analysis, analyst behavior, market sentiment, and firm-level communications.
+
+Responsibilities:
+Designed and implemented a large-scale text analysis pipeline to collect, process, and analyze financial communications data. Scraped over 7,500 earnings call and conference transcripts from S&P Capital IQ using Python. Cleaned and preprocessed transcript data in R, including text normalization, deduplication, and metadata alignment across firms, sectors, and time periods. Helped validate a structured dataset of over 1,200 equity analyst profiles by reconciling internal records with external data sources.
+
+Techniques Used:
+Python, requests, BeautifulSoup, Selenium, pandas, SQLite, R, tidytext, stringr, gptstudio, FinBERT, GPT-based prompting, sentiment analysis, data cleaning, entity resolution, and analyst profile validation.
+
+Impact:
+Built reusable infrastructure for large-scale financial text analysis. Delivered structured transcript and analyst datasets that supported downstream research on market sentiment and forecasting. Improved efficiency in extracting usable information from unstructured financial communications and reduced manual data collection burden.
+
+---
+
+Role: Research Assistant
+Organization: Rutgers University, Dr. Emara Noha
+Time Period: January 2023 - May 2024
+
+Overview:
+Supported research on telecommunications expansion in Egypt and its relationship to economic development outcomes.
+
+Responsibilities:
+Synthesized empirical findings and academic literature to draft a research manuscript. Structured datasets involving telecommunications penetration, economic indicators, and regional variation. Developed conference presentation materials, including figures and slides, to communicate findings to both technical and non-technical audiences.
+
+Techniques Used:
+Econometric modeling, difference-in-differences reasoning, time series analysis, fixed effects, robustness checks, literature synthesis, R, Stata, data visualization, and policy-oriented interpretation.
+
+Impact:
+Produced a polished manuscript and conference-ready presentation. Helped connect empirical results to existing literature and improved the clarity of the project’s policy and economic interpretation.
+
+---
+
+Role: Undergraduate Researcher
+Organization: Rutgers University, Dr. Tetsuji Yamada
+Time Period: May 2024 - May 2025
+
+Overview:
+Conducted health economics and public health research on adolescent risk behaviors using survey data and theory-driven statistical modeling.
+
+Responsibilities:
+Synthesized findings from more than 60 academic studies to guide model design. Cleaned and structured Youth Risk Behavior Surveillance System data across multiple survey waves. Designed and implemented a structural equation modeling framework grounded in the PRECEDE–PROCEED public health model to study relationships among behavioral, demographic, and socioeconomic variables.
+
+Techniques Used:
+Structural equation modeling, latent variable modeling, mediation analysis, R, lavaan, Cronbach’s alpha, model fit evaluation, CFI, RMSEA, missing data handling, variable encoding, literature synthesis, and theory-driven model specification.
+
+Impact:
+Developed a theoretically grounded and empirically interpretable model for adolescent risk behavior analysis. Demonstrated the value of combining public health theory with advanced statistical modeling to identify potential intervention pathways.
+
+---
+
+Role: Peer Tutor
+Organization: Rutgers University
+Time Period: January 2022 - May 2025
+
+Overview:
+Supported students in calculus, statistics, and quantitative coursework through tutoring, mentoring, and supplemental instruction.
+
+Responsibilities:
+Delivered one-on-one and group tutoring sessions in calculus and statistics. Led supplemental instruction sessions aligned with course material and helped students prepare for assessments. Provided individualized guidance on problem-solving strategies, coursework, and academic planning.
+
+Techniques Used:
+Active learning, guided problem solving, scaffolded explanations, visual aids, practice problem sets, step-by-step derivations, and adaptive teaching methods.
+
+Impact:
+Improved students’ conceptual understanding, confidence, and independent problem-solving ability. Built strong communication and mentorship skills by explaining technical material to students with diverse academic backgrounds.
+
+---
+
+Role: Teaching Assistant
+Organization: Johns Hopkins University
+Time Period: January 2026 - May 2026
+
+Overview:
+Teaching assistant for Bayesian inference, probabilistic modeling, and decision-theoretic coursework.
+
+Responsibilities:
+Designed and graded assignments and detailed solutions. Developed supplemental problem sets to reinforce conceptual and computational skills. Produced structured lecture notes and computational examples to connect Bayesian theory with implementation.
+
+Techniques Used:
+Bayesian inference, posterior analysis, decision theory, MCMC, simulation, Python, NumPy, SciPy, Wolfram Mathematica, derivations, reproducible code, and computational visualization.
+
+Impact:
+Created reusable instructional materials and helped students better understand advanced probabilistic concepts through clear derivations and computation-driven examples.
+
+---
+
+Role: Teaching Assistant
+Organization: Johns Hopkins University
+Time Period: August 2026 - December 2026
+
+Overview:
+Teaching assistant for machine learning and statistical learning coursework.
+
+Responsibilities:
+Designed and graded assignments and detailed solutions covering supervised and unsupervised learning algorithms. Created recitation slides, computational examples, and lecture notes to support student learning.
+
+Techniques Used:
+Linear regression, logistic regression, clustering, k-means, hierarchical clustering, dimensionality reduction, Python, NumPy, scikit-learn, visualization, and applied algorithmic explanation.
+
+Impact:
+Supported student understanding of machine learning concepts by combining mathematical intuition, computational examples, and real-world applications.
+
+---
+
+Role: Club Co-Founder
+Organization: Rutgers University Student Finance Association
+Time Period: March 2022 - May 2025
+
+Overview:
+Co-founded and helped lead a student organization focused on finance, networking, professional development, and connecting academic learning with practice.
+
+Responsibilities:
+Advised organizational leadership on growth strategy and operations. Helped plan and execute events across the academic year. Built and maintained a centralized organizational database and authored an internal handbook to document processes, roles, and best practices. Led outreach efforts to increase campus visibility and engagement.
+
+Techniques Used:
+Leadership, event planning, outreach strategy, Google Sheets, Notion, operational documentation, member data management, process standardization, and engagement tracking.
+
+Impact:
+Contributed to substantial membership growth, stronger event attendance, and more sustainable organizational infrastructure. Created documentation and systems that improved leadership transitions and reduced onboarding friction.

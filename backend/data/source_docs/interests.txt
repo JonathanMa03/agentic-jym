@@ -1,0 +1,17 @@
+Title: Interests
+Source Type: interests
+
+Overview:
+Jonathan Ma’s interests lie at the intersection of statistics, machine learning, and applied decision-making, with a focus on building robust, data-driven systems.
+
+Primary Interests:
+Bayesian data analysis, applied machine learning algorithms, generative modeling for image and audio data, empirical evaluation of economic theory, stock price forecasting, and automated data pipeline and script design.
+
+Technical Interests:
+Transfer learning, diffusion models, vector autoregressions, hidden Markov models, sentiment analysis, inverse probability weighting, quality-adjusted life years (QALY) modeling, individual patient data reconstruction, high-dimensional genomics, low-rank adaptation (LoRA), and recurrent neural networks such as LSTMs.
+
+Application Areas:
+Healthcare analytics, business analytics, human–computer interaction, financial modeling, biometrics, and quantitative finance.
+
+Long-Term Goals:
+Develop robust, data-driven optimization frameworks and contribute to the advancement of explainable, reliable, and fair AI systems for high-stakes decision-making.

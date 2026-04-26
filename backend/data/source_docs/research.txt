@@ -1,8 +1,20 @@
 Title: Research
 Source Type: research
 
-Research Interests:
-Bayesian econometrics, probabilistic machine learning, forecasting, robust modeling, and LLM systems.
+Overview:
+Jonathan Ma’s research focuses on robust statistical modeling, probabilistic machine learning, and data-driven decision-making under uncertainty. His work emphasizes combining theoretical rigor with practical, scalable systems.
 
-Current Directions:
-Jonathan Ma is interested in robust Bayesian time series modeling, uncertainty quantification, and practical AI systems for knowledge retrieval.
+Research Interests:
+Distributionally robust optimization, Bayesian methods, causal inference, big data inference, machine learning for business applications, survival analysis, generative modeling (including diffusion models), and agentic AI systems.
+
+Current Work:
+He is developing a framework for robust time series forecasting that integrates data-driven optimization with generative modeling of adverse or stress scenarios. He is also working on modeling the evolution of research topics over time using embedding-based methods and generative dynamics. In addition, he is building domain-specific data integrity tools that automate preprocessing and generate structured audit reports.
+
+Methods:
+Neural networks, gradient-based optimization, regression splines, transfer learning, Bayesian nonparametrics, Markov Chain Monte Carlo, structural equation modeling, probabilistic modeling, diffusion-based generative methods, and large language model architectures.
+
+Themes:
+Bayesian modeling, robustness under uncertainty, and explainable and reliable AI systems.
+
+Future Directions:
+Jonathan Ma is particularly interested in advancing transfer learning methods and human-in-the-loop systems for validation, with a focus on building reliable, interpretable, and scalable AI tools for real-world decision-making.

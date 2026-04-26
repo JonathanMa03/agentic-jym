@@ -1,0 +1,50 @@
+Title: Resume
+Source Type: resume
+
+Overview:
+Jonathan Ma is a graduate student in Applied Mathematics and Statistics with a strong foundation in economics, finance, and statistical modeling. His work focuses on combining machine learning, Bayesian methods, and optimization to solve data-driven problems across finance, healthcare, and business applications.
+
+Summary:
+His academic training spans industrial engineering, applied statistics, operations research, and business analytics. He is interested in building robust, interpretable, and scalable models for decision-making under uncertainty. Outside of academics, he is an experienced pianist, reflecting discipline, persistence, and creative problem-solving.
+
+Education:
+Rutgers University — B.S. Economics, B.S. Finance, Minor in Statistics  
+Johns Hopkins University — M.S.E. Applied Mathematics and Statistics (Data Science concentration)
+
+Experience:
+Research Assistant — Rutgers University  
+Developed a large-scale financial text analysis pipeline using web scraping, NLP, and data engineering to analyze thousands of earnings call transcripts and generate structured sentiment datasets.
+
+Research Assistant — Rutgers University  
+Conducted econometric research on telecommunications in Egypt using causal inference and time series methods, contributing to a research manuscript and conference presentation.
+
+Undergraduate Researcher — Rutgers University  
+Built a structural equation modeling framework to study adolescent risk behaviors using survey data and public health theory.
+
+Peer Tutor — Rutgers University  
+Delivered tutoring in calculus and statistics, improving student outcomes through structured problem-solving and active learning.
+
+Teaching Assistant — Johns Hopkins University  
+Supported Bayesian statistics coursework by designing assignments, computational examples, and lecture notes focused on probabilistic modeling and inference.
+
+Teaching Assistant — Johns Hopkins University  
+Assisted machine learning instruction by creating assignments and recitation materials covering supervised and unsupervised learning methods.
+
+Co-Founder — Student Finance Association, Rutgers University  
+Led organizational strategy and operations, driving membership growth and building internal systems for sustainability and outreach.
+
+Projects:
+Bayesian Hierarchical Modeling and Clustering of Malignant Cancer Diagnoses  
+Developed a Bayesian hierarchical model to analyze tumor severity and identify high-risk groups with uncertainty quantification.
+
+droBVAR — Robust Bayesian VAR with Diffusion-Based Innovations  
+Built a forecasting framework combining Bayesian VAR, diffusion models, and distributionally robust optimization for improved modeling under uncertainty.
+
+Stock Forecaster  
+Created a neural network–based dashboard for time series forecasting with integrated data collection and visualization.
+
+Skills:
+Machine learning, object-oriented programming, data structures and algorithms, Bayesian computation, time series analysis, mixed effects models, structural equation modeling, causal inference, nonparametric methods, clustering algorithms.
+
+Tools:
+R, Python, STATA, SAS, Jupyter, Julia, Mathematica, Excel, LaTeX, Git, Bloomberg Terminal

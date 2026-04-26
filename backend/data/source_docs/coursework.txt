@@ -1,0 +1,185 @@
+Title: Coursework
+Source Type: education
+
+Overview:
+Jonathan Ma has completed advanced coursework spanning statistics, machine learning, optimization, econometrics, and applied data science. His coursework combines theoretical foundations with applied modeling, computation, and real-world data analysis.
+
+---
+
+Course: Applied Data Mining and Machine Learning
+Description:
+Introduction to supervised and unsupervised learning methods with applications to real-world datasets.
+Key Topics:
+Naive Bayes, k-nearest neighbors, decision trees, random forests, logistic regression, SVMs, PCA, clustering, neural networks.
+Skills Gained:
+Implemented machine learning models in R, performed data preprocessing, and built analytical reports using RMarkdown and Quarto.
+
+---
+
+Course: Econometrics
+Description:
+Statistical modeling and causal inference techniques applied to economic and social science data.
+Key Topics:
+OLS, logistic/probit models, two-stage least squares, regression discontinuity, panel data, mixed effects models.
+Skills Gained:
+Built regression models in STATA, diagnosed model validity, and handled issues such as collinearity and misspecification.
+
+---
+
+Course: Time Series and Regression Analysis
+Description:
+Foundations of regression modeling and generalized linear models with emphasis on model adequacy and validation.
+Key Topics:
+Linear regression, model diagnostics, cross-validation, generalized linear models.
+Skills Gained:
+Identified model misspecification and applied validation techniques for reliable statistical inference.
+
+---
+
+Course: Statistical Models
+Description:
+Introduction to probability theory, statistical inference, and stochastic processes.
+Key Topics:
+Probability distributions, hypothesis testing, ANOVA, nonparametrics, Markov chains.
+Skills Gained:
+Developed understanding of estimator properties, inference methods, and statistical testing frameworks.
+
+---
+
+Course: Data Visualization
+Description:
+Techniques for transforming, analyzing, and visualizing data using Python-based tools.
+Key Topics:
+Data pipelines, ETL, interactive dashboards, multivariate visualization, geographic data.
+Skills Gained:
+Built data pipelines and interactive dashboards using Python, Plotly, and Dash.
+
+---
+
+Course: Applied Statistics
+Description:
+Applied statistical methods across scientific domains with emphasis on interpretation and communication.
+Key Topics:
+Sampling distributions, inference, regression, experimental design, survey analysis.
+Skills Gained:
+Produced interpretable statistical analyses and worked with survey-based data.
+
+---
+
+Course: Textual Analysis in Finance
+Description:
+Application of NLP and LLM methods to financial data and market analysis.
+Key Topics:
+Web scraping, sentiment analysis, topic modeling, embeddings, FinBERT, GPT fine-tuning.
+Skills Gained:
+Processed financial text data and applied NLP techniques for predictive modeling in finance.
+
+---
+
+Course: Machine Learning Applications in Business
+Description:
+Introduction to machine learning for business decision-making and predictive modeling.
+Key Topics:
+Supervised learning, clustering, model evaluation, text mining.
+Skills Gained:
+Built predictive models using real-world business data and applied data-driven decision-making.
+
+---
+
+Course: Elements of Statistical Learning
+Description:
+Mathematical foundations of machine learning and statistical inference.
+Key Topics:
+Kernel methods, bias-variance tradeoff, PCA, EM algorithm, SVMs, generalization theory.
+Skills Gained:
+Developed theoretical understanding of machine learning algorithms and their guarantees.
+
+---
+
+Course: Bayesian Statistics
+Description:
+Bayesian modeling and inference with emphasis on computation and applied data analysis.
+Key Topics:
+Conjugate priors, MCMC, Gibbs sampling, hierarchical models, model selection.
+Skills Gained:
+Designed Bayesian models, implemented inference algorithms, and evaluated posterior distributions.
+
+---
+
+Course: Time Series Analysis
+Description:
+Statistical modeling of time-dependent data using stochastic processes.
+Key Topics:
+AR, MA, ARMA, ARIMA models, stationarity, ACF/PACF, forecasting.
+Skills Gained:
+Built and evaluated time series models and performed forecasting using R.
+
+---
+
+Course: Computing for Applied Math
+Description:
+Programming and computational methods for applied mathematics and data science.
+Key Topics:
+Monte Carlo methods, Markov chains, stochastic differential equations, neural networks.
+Skills Gained:
+Implemented computational models in Python and applied stochastic simulation techniques.
+
+---
+
+Course: Probabilistic Machine Learning
+Description:
+Probabilistic modeling and inference with applications to modern generative models.
+Key Topics:
+Graphical models, MCMC, variational inference, VAEs, GANs, diffusion models.
+Skills Gained:
+Built probabilistic models and applied advanced sampling and inference techniques.
+
+---
+
+Course: Nonparametric Bayesian Statistics
+Description:
+Advanced Bayesian methods using flexible, infinite-dimensional models.
+Key Topics:
+Dirichlet processes, Gaussian processes, hierarchical models, variational inference.
+Skills Gained:
+Applied nonparametric Bayesian methods to clustering, spatial modeling, and real-world datasets.
+
+---
+
+Course: Constrained Optimization
+Description:
+Theory and algorithms for solving constrained optimization problems.
+Key Topics:
+KKT conditions, duality, interior-point methods, ADMM.
+Skills Gained:
+Formulated and solved constrained optimization problems using modern algorithms.
+
+---
+
+Course: Unconstrained Optimization
+Description:
+Optimization techniques for nonlinear and high-dimensional problems.
+Key Topics:
+Gradient descent, Newton methods, quasi-Newton, stochastic optimization.
+Skills Gained:
+Implemented optimization algorithms and analyzed convergence behavior.
+
+---
+
+Course: Random Matrix Theory in Data Science and Statistics
+Description:
+High-dimensional probability and random matrix methods for modern data science.
+Key Topics:
+Eigenvalue distributions, concentration inequalities, PCA, dimensionality reduction.
+Skills Gained:
+Analyzed high-dimensional data and applied random matrix theory to statistical problems.
+
+---
+
+Course: AI and Statistical Methods in Clinical Data Science
+Description:
+Integration of AI systems and statistical methods for clinical research and healthcare data.
+Key Topics:
+RAG systems, LLMs, survival analysis, causal inference, clinical trial methods.
+Skills Gained:
+Built domain-aware AI systems and applied statistical methods to clinical data science problems.

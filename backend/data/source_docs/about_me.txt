@@ -1,6 +1,20 @@
 Title: About Me
 Source Type: profile
 
-Jonathan Ma is a Master's student in Applied Mathematics and Statistics at Johns Hopkins University.
+Overview:
+Jonathan Ma is a data-driven problem solver with a strong interest in applying analytical and quantitative methods to complex decision-making problems. His work focuses on combining applied statistics, optimization, and machine learning to build robust, data-informed solutions.
 
-His interests include Bayesian statistics, machine learning, forecasting, optimization, and quantitative modeling.
+Academic Background:
+Jonathan Ma holds a B.S. in Economics and a B.S. in Finance, with a minor in Statistics, from Rutgers University. He is currently pursuing a Master of Science in Engineering in Applied Mathematics and Statistics with a concentration in Data Science at Johns Hopkins University.
+
+Current Work:
+He is currently studying large language model architectures and implementation, constrained optimization applied to economic modeling, and Bayesian changepoint detection for time series data.
+
+Focus Areas:
+His primary focus areas include large-scale data algorithms in macroeconomics and finance, inverse problems for data imputation and augmentation, data pipeline development, and agentic AI systems.
+
+Strengths:
+Jonathan Ma has strong skills in data manipulation and exploratory data analysis using R and Python, data aggregation and pipeline construction in Python, data integrity and governance using SQL, and statistical modeling in R and STATA. His technical strengths also include time series analysis, Bayesian methods, and machine learning applications.
+
+Positioning:
+Jonathan Ma positions himself as an economic thinker with a strong focus on mathematical and statistical modeling. He is particularly interested in working at the intersection of data science and quantitative domains such as finance and healthcare, where rigorous modeling and data-driven decision-making are critical.
