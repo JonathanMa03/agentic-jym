@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import ChatInput from "@/components/chat/ChatInput";
 import MessageBubble from "@/components/chat/MessageBubble";
-import SourceList from "@/components/chat/SourceList";
 import { sendChatMessage } from "@/lib/api";
 
 type Message = {
@@ -13,23 +12,57 @@ type Message = {
 
 const MAX_MESSAGES_PER_VISIT = 10;
 
+const SAMPLE_QUESTIONS = [
+  "What courses has Jonathan taken related to Bayesian statistics?",
+  "What projects has Jonathan worked on?",
+  "Summarize Jonathan's research interests.",
+  "What games does Jonathan play?",
+];
+
 export default function ChatWindow() {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [sources, setSources] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [messagesUsed, setMessagesUsed] = useState(0);
 
   useEffect(() => {
     const savedCount = sessionStorage.getItem("messagesUsed");
-    if (savedCount) {
-      setMessagesUsed(Number(savedCount));
-    }
+    if (savedCount) setMessagesUsed(Number(savedCount));
   }, []);
 
   function updateMessageCount(newCount: number) {
     setMessagesUsed(newCount);
     sessionStorage.setItem("messagesUsed", String(newCount));
+  }
+
+  function counterClass(remaining: number) {
+    if (remaining >= 7) return "counter-badge counter-green";
+    if (remaining >= 3) return "counter-badge counter-yellow";
+    return "counter-badge counter-red";
+  }
+
+  async function typeAssistantResponse(answer: string) {
+    setIsTyping(true);
+
+    setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+
+    for (let i = 0; i <= answer.length; i++) {
+      const partial = answer.slice(0, i);
+
+      setMessages((prev) => {
+        const updated = [...prev];
+        updated[updated.length - 1] = {
+          role: "assistant",
+          content: partial,
+        };
+        return updated;
+      });
+
+      await new Promise((resolve) => setTimeout(resolve, 8));
+    }
+
+    setIsTyping(false);
   }
 
   async function handleSend(message: string) {
@@ -46,18 +79,12 @@ export default function ChatWindow() {
     try {
       const response = await sendChatMessage({ message });
 
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: response.answer },
-      ]);
-      setSources(response.sources);
-
       updateMessageCount(messagesUsed + 1);
+      await typeAssistantResponse(response.answer);
     } catch (err) {
-      const message =
-        err instanceof Error ? err.message : "Something went wrong.";
-
+      const message = err instanceof Error ? err.message : "Something went wrong.";
       setError(message);
+
       setMessages((prev) => [
         ...prev,
         {
@@ -75,39 +102,30 @@ export default function ChatWindow() {
   return (
     <div className="chat-layout">
       <section className="chat-panel">
-        <h1 className="hero-title" style={{ fontSize: "3rem", marginBottom: "1rem" }}>
-          Chat with my AI Assistant!
-        </h1>
+        <h1 className="hero-title">Chat with my AI Assistant!</h1>
 
         <p className="hero-text">
-          Ask questions about my experience, research, academic background, and
-          technical interests.
+          Ask questions about my experience, research, academic background, and technical interests.
         </p>
 
-        <p
-          className="hero-text"
-          style={{ fontSize: "1rem", opacity: 0.85, marginTop: "1rem" }}
-        >
-          Only {MAX_MESSAGES_PER_VISIT} messages per site visit are allowed so my bill
-          doesn&apos;t blow up.
+        <p className="hero-text">
+          Only 10 messages per site visit are allowed so my bill doesn&apos;t blow up.
         </p>
 
-        <p
-          className="hero-text"
-          style={{ fontSize: "1rem", fontWeight: 700, marginTop: "0.5rem" }}
-        >
-          Messages remaining this visit: {remaining}
-        </p>
+        <span className={counterClass(remaining)}>
+          Messages remaining: {remaining}
+        </span>
       </section>
 
       <section className="message-list">
         {messages.length === 0 ? (
           <div className="chat-empty">
-            <p style={{ marginTop: 0 }}>You can ask questions such as:</p>
+            <p style={{ marginTop: 0 }}>Try asking:</p>
+
             <div className="prompt-list">
-              <span>• What are Jonathan&apos;s research interests?</span>
-              <span>• What projects has Jonathan worked on?</span>
-              <span>• How does his background connect statistics and machine learning?</span>
+              {SAMPLE_QUESTIONS.map((q) => (
+                <span key={q}>• {q}</span>
+              ))}
             </div>
           </div>
         ) : (
@@ -119,17 +137,19 @@ export default function ChatWindow() {
             />
           ))
         )}
+
+        {isLoading && !isTyping && (
+          <div className="message-bubble">
+            <div className="message-role">Assistant</div>
+            <div className="searching">Searching</div>
+          </div>
+        )}
       </section>
 
       {error && <div className="error-box">{error}</div>}
 
-      <SourceList sources={sources} />
-
       <section className="chat-panel">
-        <ChatInput
-          onSend={handleSend}
-          isLoading={isLoading || remaining <= 0}
-        />
+        <ChatInput onSend={handleSend} isLoading={isLoading || remaining <= 0} />
       </section>
     </div>
   );

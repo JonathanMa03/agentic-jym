@@ -3,14 +3,16 @@ type MessageBubbleProps = {
   content: string;
 };
 
-export default function MessageBubble({
-  role,
-  content,
-}: MessageBubbleProps) {
+export default function MessageBubble({ role, content }: MessageBubbleProps) {
   return (
-    <div className={`message-bubble ${role}`}>
-      <div className="message-role">{role === "user" ? "You" : "Assistant"}</div>
-      <p className="message-content">{content}</p>
+    <div className="message-bubble">
+      <div className="message-role">
+        {role === "user" ? "You" : "Assistant"}
+      </div>
+
+      <div className={role === "assistant" ? "assistant-message" : "user-message"}>
+        {content}
+      </div>
     </div>
   );
 }
