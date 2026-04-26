@@ -4,7 +4,7 @@ from app.db.supabase_client import supabase
 from app.services.embeddings import get_embedding
 
 
-def retrieve(query: str, top_k: int = 6) -> List[Dict]:
+def retrieve(query: str, top_k: int = 12) -> List[Dict]:
     query_embedding = get_embedding(query)
 
     response = supabase.rpc(
